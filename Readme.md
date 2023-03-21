@@ -1,0 +1,1 @@
+This repository contains instructional and reference materials for the four phases of the State College of Florida coding bootcamp.
