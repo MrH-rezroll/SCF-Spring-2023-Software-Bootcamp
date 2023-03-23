@@ -73,8 +73,8 @@
 #console-window{
   background-color: #000;
   color: #9bbc0f;
-  margin: 2%;
-  padding: 2%;
+  margin: 20px;
+  padding: 4px;
   height: 352px;
   overflow: scroll;
   text-anchor: end;
