@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#game-window, #game-controls {
+  border: 2px solid #3f3f3f;
+  border-radius: 10px;
+}
+
+#game-window {
+  height: 400px;
+  background-color: #ccc;
+}
+
+#game-controls button{
+  height: 30px;
+  background-color: #3f3f3f;
+  color: #eee;
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#game-controls {
+  padding: 10px;
+  background-color: #ccc;
+  position: relative;
+}
+#game-controls div{
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#up{
+  display:block;
+  margin: 0 auto;
+  width: 30px;
+}
+#down{
+  display:block;
+  margin: 0 auto;
+  width: 30px;
+}
+#left {
+  margin-right: 15px;
+  width: 30px;
+}
+#right {
+  margin-left: 15px;
+  width: 30px;
+}
+#start{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+}
+#action{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+}
+
+#console-window{
+  background-color: #000;
+  color: #9bbc0f;
+  margin: 2%;
+  padding: 2%;
+  height: 352px;
+  overflow: scroll;
+  text-anchor: end;
+}
