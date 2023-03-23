@@ -77,6 +77,5 @@
   margin: 20px;
   padding: 4px;
   height: 352px;
-  overflow: scroll;
-  text-anchor: end;
+  overflow: hidden;
 }
