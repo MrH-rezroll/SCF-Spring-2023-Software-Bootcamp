@@ -59,14 +59,14 @@
 }
 #start{
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 5px;
+  top: 38px;
   width: 80px;
 }
 #action{
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 5px;
+  top: 38px;
   width: 80px;
 }
 
