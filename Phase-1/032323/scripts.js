@@ -33,6 +33,7 @@ function outputPosition(){
 
 function power(){
     if (!isPoweredOn){
+        resetGameValues();
         consoleContent.innerHTML = "Welcome to the Adventure Game!";
         isPoweredOn = true;
     }
