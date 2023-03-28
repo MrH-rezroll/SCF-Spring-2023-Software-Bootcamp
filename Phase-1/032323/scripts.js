@@ -56,3 +56,8 @@ function checkLocation(){
         consoleContent.innerHTML += "There's nothing here.";
     }
 }
+
+function resetGameValues(){
+    posX = 0;
+    posY = 0;
+}

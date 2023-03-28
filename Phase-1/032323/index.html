@@ -19,12 +19,12 @@
         </div>
         <div id="game-controls">
             <button onclick="power()" id="power">Power</button>
-            <button onclick="moveUpOnY()" id="up">N</button>
+            <button onclick="if(isPoweredOn){moveUpOnY();}" id="up">N</button>
             <div>
-                <button onclick="moveLeftOnX()" id="left">W</button>
-                <button onclick="moveRightOnX()" id="right">E</button>
+                <button onclick="if(isPoweredOn){moveLeftOnX();}" id="left">W</button>
+                <button onclick="if(isPoweredOn){moveRightOnX();}" id="right">E</button>
             </div>
-            <button onclick="moveDownOnY()" id="down">S</button>
+            <button onclick="if(isPoweredOn){moveDownOnY();}" id="down">S</button>
             <button id="action">Action</button>
         </div>
     </div>
