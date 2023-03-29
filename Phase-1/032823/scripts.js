@@ -36,51 +36,29 @@ var mapOfRooms = [
 ];
 
 function moveUpOnY(){
-    if(!canMoveY()){
-        return;
-    }
+    if(player.position.y >= mapOfRooms.length - 1) return;
     player.position.y++;
     outputPosition();
     checkLocation();
 }
 function moveDownOnY(){
-    if(!canMoveY()){
-        return;
-    }
+    if(player.position.y < 1) return;
     player.position.y--;
     outputPosition();
     checkLocation();
 }
 
 function moveRightOnX(){
-    if(!canMoveX()){
-        return;
-    }
+    if(player.position.x >= mapOfRooms.length - 1) return;
     player.position.x++;
     outputPosition();
     checkLocation();
 }
 function moveLeftOnX(){
-    if(!canMoveX()){
-        return;
-    }
+    if(player.position.x < 1) return;
     player.position.x--;
     outputPosition();
     checkLocation();
-}
-
-function canMoveX(){
-    if(player.position.x > 0 && player.position.x < mapOfRooms.length){
-        return true;
-    }
-    return false;
-}
-
-function canMoveY(){
-    if(player.position.y > 0 && player.position.y < mapOfRooms.length){
-        return true;
-    }
-    return false;
 }
 
 function outputPosition(){
