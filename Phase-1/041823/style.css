@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#site-container{
+    position:relative;
+}
+
+#inner-container{
+    border: 1px solid #ccc;
+    width: 800px;
+    min-height: 600px;
+    background-color: bisque;
+    position: relative;
+    margin: 0 auto;
+}
+
+#modal-container{
+    width: 100%;
+    min-height: 300px;
+    position:absolute;
+    top:200px;
+    left: 0;
+    visibility: hidden;
+}
+
+#modal-message{
+    width: 600px;
+    min-height: 300px;
+    border-radius: 8px;
+    background-color: azure;
+    position:relative;
+    margin: 0 auto;
+}

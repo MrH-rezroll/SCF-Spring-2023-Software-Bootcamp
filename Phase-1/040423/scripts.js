@@ -3,6 +3,10 @@ var consoleContent = document.getElementById("console-output");
 var isPoweredOn = false;
 
 var thePlayer = new Player("Donkus", 4, 4);
+if(localStorage.getItem('player')){
+    thePlayer = JSON.parse(localStorage.getItem('player'));
+    checkLocation();
+}
 
 var enemy = {
     'position': {
@@ -31,6 +35,11 @@ var mapOfRooms = [
     [0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,1]
 ];
+
+function savePlayerObject(){
+    localStorage.setItem('player', JSON.stringify(thePlayer));
+    console.log(localStorage.getItem('player'));
+}
 
 function initializeRoomEnemies(){
     for(i = 0; i < theEnemies.length; i++){
@@ -89,9 +98,10 @@ console.log("hello console");
 function checkLocation(){
     thePlayer._inCombat = false;
     consoleContent.innerHTML = outputPosition() + "<br>";
+    let currentRoomNumber = 0;
 
     try{
-        let currentRoomNumber = mapOfRooms[thePlayer._position.y][thePlayer._position.x];
+        currentRoomNumber = mapOfRooms[thePlayer._position.y][thePlayer._position.x];
     }
     catch(e){
         console.log(e);
@@ -115,6 +125,8 @@ function checkLocation(){
         }
     }
 
+    savePlayerObject();
+
     /*
     if(thePlayer._position.x === 0 && thePlayer._position.y === 0){
         consoleContent.innerHTML += "You are at the start.";
@@ -131,8 +143,10 @@ function checkLocation(){
 }
 
 function resetGameValues(){
-    thePlayer._position.x = 0;
-    thePlayer._position.y = 0;
+    if(!localStorage.getItem('player')){
+        thePlayer._position.x = 0;
+        thePlayer._position.y = 0;
+    }
     initializeRoomEnemies();
 }
 
