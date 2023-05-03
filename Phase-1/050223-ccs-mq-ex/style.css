@@ -1,0 +1,66 @@
+body{
+    background-color: green;
+}
+
+h1{
+    text-align: center;
+}
+
+#container{
+    width: 400px;
+    min-height: 600px;
+    background-color: blue;
+    margin: 0 auto;
+}
+
+.content-box{
+    background-color:bisque;
+    height: 200px;
+    margin: 10px;
+}
+
+@media screen and (min-width: 400px) {
+    #container{
+        width: 100%;
+        display: block;
+    }
+
+    .content-box{
+        width: 96.6%;
+        flex: none;
+        margin:10px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #container{
+        width: 800px;
+        display: flex;
+    }
+
+    .content-box{
+        width: 30.8%;
+        flex: wrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #container{
+        width: 1024px;
+    }    
+    
+    .content-box{
+        width: 31.4%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #container{
+        width: 1280px;
+    }  
+    
+    .content-box{
+        width: 31.8%;
+    }
+}
+
