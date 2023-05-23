@@ -6,15 +6,26 @@ import Contact from './contact';
 import NotFound from './NotFound';
 import HeaderNav from './HeaderNav';
 
-function App() {
+
+
+
+function App() { 
+
+  const props = {
+    'name': "Jane",
+    'hobby': "Legos",
+    'sayHello': () =>{
+      window.alert("Hello!");
+    }
+  }
 
   return (
       <BrowserRouter>
         <HeaderNav />
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />}/>
+          <Route index element={<Home name={props.name} hobby={props.hobby} sayHello={props.sayHello} />} />
+          <Route path="about" element={<About name={props.name} hobby={props.hobby} sayHello={props.sayHello} />} />
+          <Route path="contact" element={<Contact sayHello={props.sayHello} />}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>
       </BrowserRouter>
