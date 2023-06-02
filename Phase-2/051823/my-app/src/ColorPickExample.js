@@ -1,47 +1,19 @@
-import React from 'react';
+import {React, useState} from 'react';
 
-export default class ColorPickExample extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            bgColor: 'green',
-            possibleBGColor: 'green'
-        }
-        this.toggleBGColor = this.toggleBGColor.bind(this);
-        this.updateBGColor = this.updateBGColor.bind(this);
-    }
+export default function ColorPickExample() {
 
-    toggleBGColor(){
-        /*
-        if(this.state.bgColor === 'green'){
-            this.setState({bgColor: 'yellow'});
-        }
-        else {
-            this.setState({bgColor: 'green'});
-        }*/
-        this.setState(
-            {
-                bgColor: this.state.possibleBGColor
-            }
-        );
-    }
+    const [bgColor, setBGColor] = useState("green");
+    const [possibleBGColor, setPossibleBGColor] = useState("green");
 
-    updateBGColor(event){
-        event.preventDefault();
-        this.setState(
-            {
-                possibleBGColor: event.target.value
-            }
-        );
-    }
-
-    render(){
-        return(
-            <div data-testid="background" style={{background: this.state.bgColor}}>
-                <h1>Background Color Changer</h1>
-                <input label="color" onChange={this.updateBGColor} type="text" /><br />
-                <button onClick={this.toggleBGColor}>Toggle Color</button>
-            </div>
-        );
-    }
+    const toggleBGColor = () => { setBGColor(possibleBGColor); }
+    
+    const updateBGColor = (event) => { event.preventDefault(); setPossibleBGColor(event.target.value); }
+    
+    return(
+        <div data-testid="background" style={{background: bgColor}}>
+            <h1>Background Color Changer</h1>
+            <input data-testid="input" label="color" onChange={updateBGColor} type="text" /><br />
+            <button data-testid="button" onClick={toggleBGColor}>Toggle Color</button>
+        </div>
+    );
 }

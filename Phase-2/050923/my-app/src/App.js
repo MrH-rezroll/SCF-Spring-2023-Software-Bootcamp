@@ -6,9 +6,6 @@ import Contact from './contact';
 import NotFound from './NotFound';
 import HeaderNav from './HeaderNav';
 
-
-
-
 function App() { 
 
   const props = {
